@@ -603,12 +603,12 @@ install_select(){
     clear
     while true
     do
-    echo  "CUAL SHADOWSOCKS DESEA INSTALAR?:"
+    echo  "QUAIS SHADOWSOCKS VOCÊ QUER INSTALAR?:"
     for ((i=1;i<=${#software[@]};i++ )); do
         hint="${software[$i-1]}"
         echo -e "${green}${i}${plain}) ${hint}"
     done
-    read -p "OPCION? (Default Libev ${software[0]}):" selected
+    read -p "OPÇÃO? (Padrão Libev ${software[0]}):" selected
     [ -z "${selected}" ] && selected="1"
     case "${selected}" in
         1|2|3|4)
@@ -618,16 +618,16 @@ install_select(){
         break
         ;;
         *)
-        echo -e "[${red}Error${plain}] Por favor solo ingresa un número [1-4]"
+        echo -e "[${red}Error${plain}] Por favor, apenas insira um número [1-4]"
         ;;
     esac
     done
 }
 
 install_prepare_password(){
-    echo "Please enter password for ${software[${selected}-1]}"
-    read -p "(Default password: androidmx):" shadowsockspwd
-    [ -z "${shadowsockspwd}" ] && shadowsockspwd="amdroidmx"
+    echo "Por favor, digite a senha para ${software[${selected}-1]}"
+    read -p "(Senha padrão: SYC-n):" shadowsockspwd
+    [ -z "${shadowsockspwd}" ] && shadowsockspwd="SYC-n"
     echo
     echo "password = ${shadowsockspwd}"
     echo
