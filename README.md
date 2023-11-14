@@ -1,4 +1,4 @@
-# ADM-Ultimate-Mod-SYC-n
+# SYC-n
 
 # Instalacion - Script Official
 
